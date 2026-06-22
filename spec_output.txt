@@ -1,0 +1,439 @@
+Software EngineeringCourse AssignmentSoftware Development Document Specification
+Based on Graduation Thesis Standardsfor the Course Assignment Deliverable
+Course: Software Engineering
+Document Type: Assignment Specification
+Version: 1.0
+Table of Contents
+1  Introduction
+  1.1  Purpose
+  1.2  Scope
+  1.3  Reference Documents
+2  General Formatting Requirements
+  2.1  Page Setup
+  2.2  Fonts and Typography
+  2.3  Paragraph and Line Spacing
+  2.4  Page Numbering
+  2.5  Heading Numbering Scheme
+  2.6  Figures and Tables
+3  Overall Document Structure
+4  Requirements Analysis Section
+  4.1  System Requirements Specification
+  4.2  Use Case Model
+  4.3  Requirements Validation
+5  Software Design Section
+  5.1  System Architecture Design
+  5.2  Class Design
+  5.3  Database Design
+  5.4  Interface Design
+6  Software Implementation Section
+  6.1  Code Repository
+  6.2  Implementation Details
+7  Software Testing Section
+  7.1  Test Cases
+  7.2  Test Code
+  7.3  Test Results
+8  References and Bibliography
+9  Appendix
+  Appendix A: LLM Prompt Records
+  Appendix B: Supplementary Materials
+  Appendix C: Project Topics
+1  Introduction
+1.1  Purpose
+This document defines the standardized specification for the Software Development Document that every student must submit as part of the Software Engineering course assignment. It establishes the structure, formatting rules, content requirements, and quality standards for the deliverable, drawing from established graduation thesis (毕业设计论文) conventions while adapting them to the specific needs of this course.
+The specification is designed to ensure that all submitted documents follow a consistent, professional format that demonstrates systematic software engineering practices across the entire development lifecycle.
+1.2  Scope
+This specification applies to all students enrolled in the Software Engineering course. The guidelines cover:
+Document structure and organization
+Formatting and layout requirements (fonts, margins, spacing, pagination)
+Content requirements for each mandatory section
+Rules for figures, tables, code listings, and references
+Submission and quality assurance requirements
+2  General Formatting Requirements
+2.1  Page Setup
+Item
+Requirement
+Paper Size
+A4 (210 mm x 297 mm)
+Top Margin
+2.7 cm
+Bottom Margin
+2.5 cm
+Left Margin
+3.0 cm (for binding)
+Right Margin
+2.5 cm
+Header from Edge
+1.5 cm
+Footer from Edge
+1.75 cm
+2.2  Fonts and Typography
+The document must use the following font specifications throughout:
+Element
+Font
+Size & Style
+Document Title (Cover)
+Times New Roman
+26 pt, Bold, Centered
+Chapter Headings (H1)
+Times New Roman
+16 pt, Bold
+Section Headings (H2)
+Times New Roman
+14 pt, Bold
+Subsection Headings (H3)
+Times New Roman
+13 pt, Bold
+Body Text
+Times New Roman
+12 pt
+Additional font rules:
+Bold may be used sparingly for emphasis within body text.
+Code listings must use Courier New or Consolas, 10 pt.
+All text should be rendered in black unless part of a colored diagram.
+2.3  Paragraph and Line Spacing
+Property
+Value
+Line Spacing
+1.5 lines (for body text)
+Paragraph Spacing Before
+0 pt
+Paragraph Spacing After
+6 pt
+2.4  Page Numbering
+Page numbering follows these conventions:
+Front matter (TOC, abstract): Lowercase Roman numerals (i, ii, iii...), centered at page bottom.
+Main body (Chapter 1 onward): Arabic numerals (1, 2, 3...), centered at page bottom.
+The cover / title page must NOT display a page number.
+Page number font: Times New Roman, 10 pt.
+2.5  Heading Numbering Scheme
+All headings use a hierarchical decimal numbering scheme:
+1  Introduction                       (first-level, Heading 1)    1.1  Purpose                      (second-level, Heading 2)        1.1.1  Background Context      (third-level, Heading 3)2  Requirements Analysis               (first-level, Heading 1)    2.1  Functional Requirements        (second-level, Heading 2)...
+Do not place a period after the heading number. Do not skip heading levels.
+2.6  Figures and Tables
+Figures and tables must be formatted as follows:
+Figure captions go BELOW the figure. Format: "Figure 2.1  System Architecture Diagram"
+Table captions go ABOVE the table. Format: "Table 3.1  User Table Schema"
+Numbering is chapter-based: the first figure in Chapter 2 is "Figure 2.1".
+All figures and tables must be referenced in the body text.
+Insert high-resolution images (minimum 150 DPI). Preferred formats: PNG, SVG.
+3  Overall Document Structure
+The submitted software development document must contain the following sections in order:
+Chapter
+Section
+Contents
+Front Cover
+Title, course name, student name, ID, date
+Table of Contents
+Auto-generated list of all chapters and sections
+1
+Introduction
+Project background, objectives, scope
+2
+Requirements Analysis
+SRS, use case model (diagram + specifications)
+3
+Software Design
+Architecture, class design, database design, UI/API design
+4
+Software Implementation
+GitHub repository URL, tech stack, key implementations
+5
+Software Testing
+Test cases, automated test code, results and analysis
+6
+Summary and Conclusions
+Project reflection, challenges, future work
+References
+All cited sources in standard bibliography format
+Appendix
+LLM prompt records, supplementary materials
+Students are also encouraged to include sections on "Project Background" and "Technologies Used" within the Introduction chapter as appropriate for their chosen project.
+4  Requirements Analysis Section
+This section presents a complete analysis of the software requirements for the selected project. It establishes what the system must do before any design or implementation begins.
+4.1  System Requirements Specification
+4.1.1  Project Overview
+Provide a concise description of the project, its context, and overall goals. Identify the target users and key stakeholders.
+4.1.2  Functional Requirements
+List all functional requirements using a consistent numbering scheme (e.g., FR-01, FR-02...). Each requirement must be:
+Uniquely identified with a requirement ID
+Clearly stated in a single, unambiguous sentence
+Traceable to use cases in section 4.2
+Example functional requirements table:
+ID
+Name
+Description
+FR-01
+User Registration
+The system shall allow new users to register with email and password.
+FR-02
+User Authentication
+The system shall authenticate users with email/password credentials.
+FR-03
+Book Search
+The system shall allow users to search books by title, author, or ISBN.
+4.1.3  Non-Functional Requirements
+Specify constraints and quality attributes including:
+Performance — expected response time, concurrent user capacity
+Security — authentication mechanism, data encryption, access control
+Usability — target user skill level, interface language
+Reliability — uptime expectations, data backup requirements
+Technical Constraints — programming language, framework, database, platform
+4.2  Use Case Model
+4.2.1  Use Case Diagram
+Include a UML use case diagram showing all actors and use cases. The diagram must:
+Identify all actor roles (e.g., Admin, Librarian, Member)
+Show all major use cases as ovals connected to actors
+Use proper UML notation (stick figures for actors, solid lines for communication)
+Use include / extend / generalization relationships where applicable
+Insert the diagram as a high-resolution image (PNG or SVG recommended).
+4.2.2  Use Case Specifications
+For each use case, provide a detailed specification using the following template:
+Field
+Description
+Use Case ID
+UC-01
+Use Case Name
+Register New User
+Actors
+Guest (initiator)
+Preconditions
+User does not already have an account.
+Postconditions
+New user account created; user is logged in.
+Main Flow
+1. User enters registration details.2. System validates input.3. System creates account.4. System sends confirmation.
+Alternative Flows
+2a. Invalid input: show error, return to step 1.
+4.3  Requirements Validation
+Describe how the requirements were validated:
+Review checklists used to verify completeness and consistency
+Stakeholder or peer feedback (if applicable)
+Traceability matrix linking functional requirements to use cases
+5  Software Design Section
+This section translates the requirements into a concrete system design, covering architecture, classes, and data persistence.
+5.1  System Architecture Design
+Present the high-level architecture:
+An architecture diagram showing major components and their interactions
+Architectural pattern used (e.g., MVC, Layered Architecture, Client-Server)
+Module decomposition and responsibilities
+Technology stack overview
+Example: Web application architecture using a three-layer model:
+Presentation Layer: HTML/CSS/JavaScript frontend (React or Vue.js optional)
+Business Logic Layer: REST API service (Python/Flask or Java/Spring Boot)
+Data Access Layer: Database (MySQL or PostgreSQL) with ORM
+5.2  Class Design
+Provide UML class diagrams for the core domain model:
+Class diagram showing all major classes, attributes, methods, and relationships
+Multiplicity indicators (1, 0..*, 1..*, etc.) on associations
+Inheritance hierarchies and interface implementations if applicable
+For each major class, describe its role:
+Class
+Responsibility
+Key Attributes
+User
+Manages user account information
+userId, name, email, passwordHash, role
+Book
+Represents a book in the library catalog
+bookId, title, author, ISBN, status, coverImage
+Loan
+Tracks book borrowing transactions
+loanId, userId, bookId, borrowDate, dueDate, returnedDate
+Fine
+Records overdue fines
+fineId, loanId, amount, isPaid, createdAt
+5.3  Database Design
+Present the database design including:
+Entity-Relationship Diagram (ERD) showing all tables and relationships
+Schema definitions with table name, columns, data types, and constraints
+Example schema table:
+Table
+Column
+Type
+Constraints
+Description
+users
+id
+INT
+PRIMARY KEY, AUTO_INCREMENT
+Unique user identifier
+users
+name
+VARCHAR(100)
+NOT NULL
+User's full name
+users
+email
+VARCHAR(255)
+UNIQUE, NOT NULL
+Login email
+books
+isbn
+VARCHAR(13)
+PRIMARY KEY
+ISBN-13 identifier
+books
+title
+VARCHAR(200)
+NOT NULL
+Book title
+5.4  Interface Design
+Describe the interfaces of the system:
+User Interface: wireframes or mockups of key screens with navigation flow
+API Design: REST endpoints specifying HTTP method, URL, request/response format
+Example API endpoints:
+Method
+Endpoint
+Request Body
+Response
+POST
+/api/users/register
+{"name", "email", "password"}
+{"userId": 1, "status": "created"}
+GET
+/api/books?search=TITLE
+(query params)
+{"books": [{...}, {...}]}
+POST
+/api/loans
+{"userId": 1, "bookId": "ISBN"}
+{"loanId": 1, "dueDate": "..."}
+6  Software Implementation Section
+6.1  Code Repository
+Provide the URL of the GitHub repository containing the complete project source code. The repository must:
+Include a README.md with project description, setup instructions, and usage guide
+Have meaningful commit messages following a consistent style
+Be organized with a clear directory structure
+Recommended directory structure for a web application:
+project-root/  +-- README.md  +-- requirements.txt / pom.xml / package.json  +-- src/  |   +-- main/  |   |   +-- java/python/...     # application source code  |   |   +-- resources/          # configuration files  |   |   +-- webapp/             # static assets (HTML, CSS, JS)  |   +-- test/                   # unit and integration tests  +-- docs/  |   +-- diagrams/               # UML diagrams, architecture images  |   +-- api-spec/               # API documentation  +-- .gitignore
+6.2  Implementation Details
+Describe the implementation of the system:
+Programming languages, frameworks, and libraries used
+How core features were implemented (reference specific classes/modules)
+Design patterns applied in the code
+Challenges encountered and solutions adopted
+Guidelines for code snippets in the document:
+Include small code snippets (up to approximately 20 lines) to illustrate key patterns.
+Do NOT paste large blocks of source code into the document.
+Reference the GitHub repository for full source code access.
+7  Software Testing Section
+7.1  Test Cases
+Provide a comprehensive set of test cases covering all major functionality. Each test case must include:
+ID
+Description
+Test Steps
+Expected Result
+Status
+TC-001
+User Registration — Success
+1. Navigate to register2. Enter valid data3. Submit
+Account created, user logged in
+Pass
+TC-002
+Login — Wrong Password
+1. Enter email2. Enter wrong password3. Submit
+Error: "Invalid credentials"
+Pass
+TC-003
+Book Search — No Results
+1. Enter nonexistent title2. Search
+Empty result list displayed
+Pass
+TC-004
+Borrow — Exceeds Limit
+1. Try to borrow a 6th book2. Submit
+Error: "Borrow limit reached"
+Pass
+Test cases should include:
+Positive tests — valid inputs producing expected outcomes
+Negative tests — invalid inputs verifying error handling
+Boundary tests — edge conditions (e.g., maximum book limit, date boundaries)
+7.2  Test Code
+Include or reference the automated test code. Use a standard testing framework:
+Java: JUnit
+Python: PyTest or unittest
+JavaScript/TypeScript: Jest or Mocha
+Example test code snippet (Python / PyTest):
+# Example: Test user registration endpointdef test_user_registration_success(client):    response = client.post("/api/users/register", json={        "name": "Alice",        "email": "alice@example.com",        "password": "SecurePass123"    })    assert response.status_code == 201    assert response.json["status"] == "created"
+7.3  Test Results
+Report test execution results:
+Number of tests written versus executed
+Pass/fail counts and pass rate percentage
+Code coverage metrics if available
+Any known unresolved defects
+Example test results summary:
+Test Type
+Total
+Passed
+Pass Rate
+Unit Tests
+25
+25
+100%
+Integration Tests
+10
+9
+90%
+Total
+35
+34
+97.1%
+8  References and Bibliography
+All sources cited in the document must be listed in the References section. Follow the GB/T 7714 standard (Chinese national standard for bibliography), or alternatively use APA or IEEE style consistently throughout the document.
+Reference format examples:
+Books:
+[1] Pressman R S. Software Engineering: A Practitioner's Approach. 8th ed. New York: McGraw-Hill Education, 2014.
+Journal Articles:
+[2] Sommerville I. Software Engineering. 10th ed. Boston: Pearson, 2016.
+Conference Papers:
+[3] Beck K. Embracing change with extreme programming. IEEE Computer, 1999, 32(10): 70-77.
+Online Resources:
+[4] GitHub. Mastering Markdown. https://guides.github.com/features/mastering-markdown/, accessed 2026-05-27.
+Reference numbering rules:
+Number references sequentially in the order they first appear.
+Each in-text citation must have a corresponding entry in the reference list.
+Use square brackets for citations: [1], [2-4].
+9  Appendix
+Appendix A: LLM Prompt Records
+As required by the course policy, all prompts used with AI tools during the software development process must be recorded and included in this appendix. This includes prompts for code generation, requirements refinement, design assistance, test generation, and documentation.
+Record each prompt using the following format:
+ID
+Phase
+Prompt Summary
+Output Used
+REQ-001
+Requirements
+Act as a software engineer with 15 years of experience. Read my requirements and help me refine them...
+Refined FR list
+DES-002
+Design
+Generate a database schema for a library management system with tables for users, books, and loans...
+ERD and DDL
+IMP-003
+Implementation
+Write a Flask REST API endpoint for user registration with validation...
+Python code for /api/users/register
+TST-004
+Testing
+Generate PyTest test cases for the user registration endpoint...
+Test code with 8 test cases
+This appendix is critical for the AIGC content detection review. Failure to include a complete prompt record may result in the submission being flagged for excessive AI-generated content.
+Appendix B (Optional): Supplementary Materials
+Include any additional supporting materials:
+Full-size diagrams or high-resolution images
+Additional data tables, configuration files, or environment setup guides
+Deployment instructions (if applicable)
+For complete details on functional and non-functional requirements, refer to the Software Engineering Experiment Manual.
+Submission Checklist
+Before submission, verify that your document meets ALL of the following requirements:
+Document follows the specified page layout (A4, correct margins).
+All sections (Requirements, Design, Implementation, Testing) are present.
+Use case diagram and use case specifications are included.
+Class diagram and database design (ERD or schema) are included.
+GitHub repository URL is provided in the Implementation section.
+Test cases and test code/results are documented.
+LLM prompt records are attached in Appendix A.
+All figures and tables have proper captions and numbering.
+References are in the correct format and cited in the text.
+Document passes plagiarism check (similarity < 40%) and AIGC detection (AI content < 50%).
+File is named with your Student ID number (e.g., 2021001234.docx).
